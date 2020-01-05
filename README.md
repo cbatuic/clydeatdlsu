@@ -3,6 +3,11 @@ View Azure Web app demo [here](https://clydeatdlsu.azurewebsites.net/)
 
 ### Setup (note: This can be implemented easily using Azure CLI)
 - [x] Python Environment
+- [x] Python Script
+- [x] Run Flask
+- [x] Create Azure Resource Group
+- [x] Create Azure Web App Services
+- [x] Deploy
 
 ### Steps
 
@@ -65,10 +70,13 @@ __pycache__/
     * Region: (Asia Pacific) Southeast Asia
   4. Review and create.
 
-  7. Deployment Configuration
-    1. Select Deployment Center > Local Git
-    2. See Deployment Credentials for both git and ftp
-    3. ```git remote add azure https://<azure app name>.scm.azurewebsites.net:443/<repo>.git```
-    4. ```git commit -a -m "first commit"```
-    5. ```git push azure master```
-    6. (Optional) Navigate to Application Settings and enter the following line ```gunicorn --timeout 600 hello:app```. Use this command if you did not use main.py as the main python script.
+7. Deployment Configuration
+  1. Select Deployment Center > Local Git
+  2. See Deployment Credentials for both git and ftp
+  3. ```git remote add azure https://<azure app  name>.scm.azurewebsites.net:443/<repo>.git```
+  4. ```git commit -a -m "first commit"```
+  5. ```git push azure master```
+  6. (Optional) Navigate to Application Settings and enter the following line ```gunicorn --timeout 600 hello:app```. Use this command if you did not use main.py as the main python script.
+
+### Other References
+* [source1](https://github.com/Azure-Samples/python-docs-hello-world)
