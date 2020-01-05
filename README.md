@@ -1,5 +1,5 @@
 # clydeatdlsu
-Azure Web App
+View Azure Web app demo [here](https://clydeatdlsu.azurewebsites.net/)
 
 ### Setup (note: This can be implemented easily using Azure CLI)
 - [x] Python Environment
