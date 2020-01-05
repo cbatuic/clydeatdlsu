@@ -1,7 +1,7 @@
 # clydeatdlsu
 Azure Web App
 
-### Setup
+### Setup (note: This can be implemented easily using Azure CLI)
 - [x] Python Environment
 
 ### Steps
@@ -43,7 +43,7 @@ __pycache__/
 ```
 
 5. Create azure resource group [here](https://portal.azure.com/#home).
-  1. Go to left navigation and click Resources
+  1. Go to left navigation panel and select Resources
   2. Add new resources
   3. Fill in input fields
     * Subscription: Azure subscription 1
@@ -51,4 +51,24 @@ __pycache__/
     * Region: (Asia Pacific) Southeast Asia
   4. Review and create.
 
-6. 
+6. Create Wep App Services
+  1. Go to left navigation panel and select App Services
+  2. Create new Web App
+  3. Fill in input fields
+    * Subscription: Azure subscription 1
+    * Resource group: clydeatuic-flask-resource-group
+    * Name: clydeatdlsu.azurewebsites.net
+    * Publish: Code
+    * Runtime Stack: Python 3.6
+    * OS: Linux
+    * Region: Southeast Asia
+    * Region: (Asia Pacific) Southeast Asia
+  4. Review and create.
+
+  7. Deployment Configuration
+    1. Select Deployment Center > Local Git
+    2. See Deployment Credentials for both git and ftp
+    3. ```git remote add azure https://<azure app name>.scm.azurewebsites.net:443/<repo>.git```
+    4. ```git commit -a -m "first commit"```
+    5. ```git push azure master```
+    6. (Optional) Navigate to Application Settings and enter the following line ```gunicorn --timeout 600 hello:app```. Use this command if you did not use main.py as the main python script.
