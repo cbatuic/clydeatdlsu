@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+requirements.txt
+requirements1.txt
+hello.py
+static/
+templates/
