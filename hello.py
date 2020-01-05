@@ -42,5 +42,9 @@ def hello_world():
     pc = "%3.2f" % (pc)
     return render_template("index.html",_class=label[1], _prediction=pc, filename=filename)
 
+@app.route('/test')
+def test():
+    return """<h1>Clyde test 1 2 3!</h1>"""
+
 if __name__ == '__main__':
     app.run()
